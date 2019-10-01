@@ -18,18 +18,18 @@
 
     //====================================== Theme Zhihu ===========================================
 
-    <style name="Matisse.Zhihu" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Matisse.Zhihu" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/zhihu_primary</item>
         <item name="colorPrimaryDark">@color/zhihu_primary_dark</item>
         <item name="toolbar">@style/Toolbar.Zhihu</item>
         <item name="album.dropdown.title.color">@color/zhihu_album_dropdown_title_text</item>
         <item name="album.dropdown.count.color">@color/zhihu_album_dropdown_count_text</item>
-        <item name="album.element.color">@android:color/white</item>
+        <item name="album.element.color">@android:color/black</item>
         <item name="album.thumbnail.placeholder">@color/zhihu_album_dropdown_thumbnail_placeholder</item>
         <item name="album.emptyView">@drawable/ic_empty_zhihu</item>
         <item name="album.emptyView.textColor">@color/zhihu_album_empty_view</item>
         <item name="item.placeholder">@color/zhihu_item_placeholder</item>
-        <item name="item.checkCircle.backgroundColor">@color/zhihu_item_checkCircle_backgroundColor</item>
+        <item name="item.checkCircle.backgroundColor">@color/zhihu_primary</item>
         <item name="item.checkCircle.borderColor">@color/zhihu_item_checkCircle_borderColor</item>
         <item name="page.bg">@color/zhihu_page_bg</item>
         <item name="bottomToolbar.bg">@color/zhihu_bottom_toolbar_bg</item>

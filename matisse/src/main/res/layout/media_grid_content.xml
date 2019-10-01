@@ -14,37 +14,43 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
+    <android.support.v7.widget.AppCompatImageView
         android:id="@+id/media_thumbnail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
     <com.zhihu.matisse.internal.ui.widget.CheckView
         android:id="@+id/check_view"
+        android:layout_margin="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top|right"/>
+        android:layout_gravity="top|end"/>
 
-    <ImageView
+    <android.support.v7.widget.AppCompatImageView
         android:id="@+id/gif"
-        android:layout_width="wrap_content"
+        android:layout_width="25dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="right|bottom"
+        android:layout_gravity="end|bottom"
         android:layout_marginBottom="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
         android:src="@drawable/ic_gif"
+        tools:visibility="visible"
         android:visibility="gone"/>
 
     <TextView
         android:id="@+id/video_duration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right|bottom"
+        android:layout_gravity="end|bottom"
         android:layout_marginBottom="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="gone"/>
+
 </merge>

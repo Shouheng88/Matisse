@@ -20,8 +20,6 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
 import android.graphics.RadialGradient;
 import android.graphics.Rect;
 import android.graphics.Shader;
@@ -37,12 +35,12 @@ import com.zhihu.matisse.R;
 public class CheckView extends View {
 
     public static final int UNCHECKED = Integer.MIN_VALUE;
-    private static final float STROKE_WIDTH = 3.0f; // dp
-    private static final float SHADOW_WIDTH = 6.0f; // dp
-    private static final int SIZE = 48; // dp
-    private static final float STROKE_RADIUS = 11.5f; // dp
-    private static final float BG_RADIUS = 11.0f; // dp
-    private static final int CONTENT_SIZE = 16; // dp
+    private static final float STROKE_WIDTH = 2.0f; // dp
+    private static final float SHADOW_WIDTH = 2.0f; // dp
+    private static final int SIZE = 28; // dp
+    private static final float STROKE_RADIUS = 10.5f; // dp
+    private static final float BG_RADIUS = 10.0f; // dp
+    private static final int CONTENT_SIZE = 18; // dp
     private boolean mCountable;
     private boolean mChecked;
     private int mCheckedNum;
@@ -83,18 +81,14 @@ public class CheckView extends View {
         mStrokePaint = new Paint();
         mStrokePaint.setAntiAlias(true);
         mStrokePaint.setStyle(Paint.Style.STROKE);
-        mStrokePaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER));
         mStrokePaint.setStrokeWidth(STROKE_WIDTH * mDensity);
         TypedArray ta = getContext().getTheme().obtainStyledAttributes(new int[]{R.attr.item_checkCircle_borderColor});
-        int defaultColor = ResourcesCompat.getColor(
-                getResources(), R.color.zhihu_item_checkCircle_borderColor,
-                getContext().getTheme());
+        int defaultColor = ResourcesCompat.getColor(getResources(), R.color.zhihu_item_checkCircle_borderColor, getContext().getTheme());
         int color = ta.getColor(0, defaultColor);
         ta.recycle();
         mStrokePaint.setColor(color);
 
-        mCheckDrawable = ResourcesCompat.getDrawable(context.getResources(),
-                R.drawable.ic_check_white_18dp, context.getTheme());
+        mCheckDrawable = ResourcesCompat.getDrawable(context.getResources(), R.drawable.ic_check_white_18dp, context.getTheme());
     }
 
     public void setChecked(boolean checked) {
@@ -133,8 +127,6 @@ public class CheckView extends View {
 
         // draw outer and inner shadow
         initShadowPaint();
-        canvas.drawCircle((float) SIZE * mDensity / 2, (float) SIZE * mDensity / 2,
-                (STROKE_RADIUS + STROKE_WIDTH / 2 + SHADOW_WIDTH) * mDensity, mShadowPaint);
 
         // draw white stroke
         canvas.drawCircle((float) SIZE * mDensity / 2, (float) SIZE * mDensity / 2,
@@ -195,11 +187,8 @@ public class CheckView extends View {
             mBackgroundPaint = new Paint();
             mBackgroundPaint.setAntiAlias(true);
             mBackgroundPaint.setStyle(Paint.Style.FILL);
-            TypedArray ta = getContext().getTheme()
-                    .obtainStyledAttributes(new int[]{R.attr.item_checkCircle_backgroundColor});
-            int defaultColor = ResourcesCompat.getColor(
-                    getResources(), R.color.zhihu_item_checkCircle_backgroundColor,
-                    getContext().getTheme());
+            TypedArray ta = getContext().getTheme().obtainStyledAttributes(new int[]{R.attr.item_checkCircle_backgroundColor});
+            int defaultColor = ResourcesCompat.getColor(getResources(), R.color.zhihu_item_checkCircle_backgroundColor, getContext().getTheme());
             int color = ta.getColor(0, defaultColor);
             ta.recycle();
             mBackgroundPaint.setColor(color);
@@ -210,7 +199,7 @@ public class CheckView extends View {
         if (mTextPaint == null) {
             mTextPaint = new TextPaint();
             mTextPaint.setAntiAlias(true);
-            mTextPaint.setColor(Color.WHITE);
+            mTextPaint.setColor(Color.BLACK);
             mTextPaint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
             mTextPaint.setTextSize(12.0f * mDensity);
         }

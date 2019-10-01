@@ -52,12 +52,13 @@ dependencies {
 // jcenter configuration for novoda's bintray-release
 // $ ./gradlew clean build bintrayUpload -PbintrayUser=BINTRAY_USERNAME -PbintrayKey=BINTRAY_KEY -PdryRun=false
 publish {
-    userOrg = 'zhihu'
-    groupId = 'com.zhihu.android'
+    userOrg = 'easymark'
+    groupId = 'me.shouheng.ui'
     artifactId = 'matisse'
-    publishVersion = '0.5.2-beta4'
-    desc = 'A well-designed local image selector for Android'
-    website = 'https://www.zhihu.com/'
+    repoName = 'Android'
+    publishVersion = '1.0.0'
+    desc = 'The shouheng Matisse for Android.'
+    website = 'https://github.com/Shouheng88/Matisse'
 }
 
 task javadoc(type: Javadoc) {

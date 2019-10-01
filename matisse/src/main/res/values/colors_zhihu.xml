@@ -15,10 +15,10 @@
   limitations under the License.
   -->
 <resources>
-    <color name="zhihu_primary">#1E8AE8</color>
-    <color name="zhihu_primary_dark">#176EB9</color>
+    <color name="zhihu_primary">#f4f4f4</color>
+    <color name="zhihu_primary_dark">#d0d0d0</color>
 
-    <color name="zhihu_album_popup_bg">#FFFFFF</color>
+    <color name="zhihu_album_popup_bg">#f4f4f4</color>
     <color name="zhihu_album_dropdown_title_text">#DE000000</color>
     <color name="zhihu_album_dropdown_count_text">#999999</color>
     <color name="zhihu_album_dropdown_thumbnail_placeholder">#EAEEF4</color>
