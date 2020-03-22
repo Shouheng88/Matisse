@@ -116,8 +116,8 @@ public class SampleActivity extends AppCompatActivity implements View.OnClickLis
                                 case R.id.dracula:
                                     Matisse.from(SampleActivity.this)
                                             .choose(MimeType.ofImage())
+                                            .countable(true)
                                             .theme(R.style.Matisse_Dracula)
-                                            .countable(false)
                                             .addFilter(new GifSizeFilter(320, 320, 5 * Filter.K * Filter.K))
                                             .maxSelectable(9)
                                             .originalEnable(true)

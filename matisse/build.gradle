@@ -56,7 +56,7 @@ publish {
     groupId = 'me.shouheng.ui'
     artifactId = 'matisse'
     repoName = 'Android'
-    publishVersion = '1.0.0'
+    publishVersion = '1.2.1'
     desc = 'The shouheng Matisse for Android.'
     website = 'https://github.com/Shouheng88/Matisse'
 }
